@@ -1,2 +1,30 @@
-# chinese-text-humanizer
-Chinese-text-humanizer skill for agents and AI models to turn AI-generated scripts/novels/stories into a more humanized version, allowing a possiblility for AI-assisted text generation workflow with minimum human rework.
+# Chinese Text Humanizer
+
+中文小说、游戏台本、互动剧情、对白和长文的校对 Skill。它检查词句是否顺畅、指代是否清楚、场景能否接上，并保留符合人物与场景的简省表达。
+
+## 在 Codex 中使用
+
+1. 下载本仓库，将 [`chinese-text-humanizer`](./chinese-text-humanizer/) 文件夹复制到项目的 `.agents/skills/`。
+2. 确认文件位于 `.agents/skills/chinese-text-humanizer/SKILL.md`。
+3. 打开项目，在对话中选中或输入 `$chinese-text-humanizer`，附上稿件及修改范围。
+
+```text
+$chinese-text-humanizer 检查这段台本的指代和场景转接，先列问题，暂不改稿。
+```
+
+```text
+$chinese-text-humanizer 直接润色以下对白，只改会造成误读或明显卡顿的地方。
+```
+
+长文或台本在改写范围未明确时，先列出叙事缺口、明确硬伤和存疑选改。确认后再应用修改。用户已指定范围和交付形式时，按当次要求执行。
+
+## 改写示例
+
+| 语境与原文 | 处理 |
+| --- | --- |
+| 对讲机下令：“架枪！” | 保留。这里要求立刻执行一个动作。 |
+| 旁白要写人物一直守在窗口：“他在窗口架枪，目光没离开街口。” | 可改为“他在窗口架着枪，目光没离开街口。”原文已明确人物处于持续警戒状态时，补“着”能写清姿态。 |
+| 人物先把裂缝看成针孔，随后看见边缘在动：“不是针孔，是裂缝在扩大。” | 保留。台词体现人物修正初判。 |
+| 旁白已经确认是裂缝，无人把它看作针孔：“不是针孔，是裂缝在扩大。” | 如果否定部分没有额外作用，可直接写“裂缝在扩大。” |
+
+当前版本为 v1.3。完整工作流见 [SKILL.md](./chinese-text-humanizer/SKILL.md)。
